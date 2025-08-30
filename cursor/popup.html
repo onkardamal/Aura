@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aura</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="aura-container dark-theme">
+      <!-- Mood Status Bar -->
+      <div class="mood-status-bar">
+        <div class="mood-pill" id="moodPill">
+          <span id="moodLabel">Neutral</span>
+        </div>
+        <div class="sentiment-score" id="sentimentScore">0.00</div>
+      </div>
+
+      <!-- Empathetic Message -->
+      <div class="empathy-message">
+        <p id="empathyText">You're doing great. I'm here with you.</p>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="action-buttons">
+        <button class="action-pill" id="simplifyBtn">
+          <span class="btn-icon">✨</span>
+          Simplify
+        </button>
+        <button class="action-pill" id="breatheBtn">
+          <span class="btn-icon">🫁</span>
+          Breathe
+        </button>
+        <button class="action-pill" id="readBtn">
+          <span class="btn-icon">📖</span>
+          Read
+        </button>
+        <button class="action-pill" id="warmBtn">
+          <span class="btn-icon">🔥</span>
+          Warm
+        </button>
+        <button class="action-pill" id="summarizeBtn">
+          <span class="btn-icon">📝</span>
+          Summarize
+        </button>
+      </div>
+
+      <!-- Reading Mode Prompt -->
+      <div class="reading-prompt" id="readingPrompt">
+        <div class="prompt-border">
+          <p>Looks like deep reading. Enable Reading Mode?</p>
+          <div class="prompt-buttons">
+            <button class="prompt-btn yes" id="enableReadingBtn">Yes</button>
+            <button class="prompt-btn no" id="disableReadingBtn">No</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mood Insights -->
+      <div class="mood-insights" id="moodInsights" style="display: none;">
+        <h4>💡 Current Mood Analysis</h4>
+        <div class="insight-grid">
+          <div class="insight-card" id="typingInsight">
+            <h5>⌨️ Typing Pattern</h5>
+            <p id="typingAnalysis">Analyzing...</p>
+          </div>
+          <div class="insight-card" id="contentInsight">
+            <h5>📄 Content Mood</h5>
+            <p id="contentMood">Analyzing...</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video Recommendations -->
+      <div class="video-recommendations" id="videoRecommendations" style="display: none;">
+        <h4>🎬 Mood-Based Videos</h4>
+        <div class="video-grid" id="videoGrid"></div>
+      </div>
+
+      <!-- Motivational Quotes -->
+      <div class="quotes-section" id="quotesSection" style="display: none;">
+        <h4>💪 Daily Motivation</h4>
+        <div class="quote-card" id="quoteCard">
+          <p id="quoteText">Loading quote...</p>
+          <span id="quoteAuthor">- Aura</span>
+        </div>
+        <button class="refresh-quote" id="refreshQuoteBtn">🔄 New Quote</button>
+      </div>
+
+      <!-- Loading Overlay -->
+      <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+        <div class="loading-spinner">
+          <div class="spinner-ring"></div>
+          <div class="spinner-text">Analyzing with AI...</div>
+        </div>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura - An Empathetic Digital Environment</title>
+    <link rel="stylesheet" href="aura.css">
+</head>
+<body class="default-mode">
+    <div class="container">
+        <header>
+            <h1>Aura</h1>
+            <p>An AI-powered empathetic digital environment</p>
+            
+            <div class="mode-selector">
+                <button id="default-mode-btn" class="mode-btn active">Default</button>
+                <button id="study-mode-btn" class="mode-btn">Study Mode</button>
+                <button id="read-mode-btn" class="mode-btn">Read Mode</button>
+                <button id="focus-mode-btn" class="mode-btn">Focus Mode</button>
+            </div>
+        </header>
+        
+        <main>
+            <div class="input-container">
+                <h2>Share your thoughts...</h2>
+                <textarea id="user-input" placeholder="Start typing here. Aura will adapt to your emotional state..."></textarea>
+                <div id="typing-stats">
+                    <div id="typing-speed">Typing Speed: <span id="wpm-value">0 WPM</span></div>
+                    <div id="typing-accuracy">Accuracy: <span id="accuracy-value">100%</span></div>
+                </div>
+                <div id="sentiment-indicator">Sentiment: <span id="sentiment-value">Neutral</span></div>
+            </div>
+            
+            <div class="features-panel">
+                <div class="feature-section">
+                    <h3>Text Tools</h3>
+                    <button id="summarize-btn" class="feature-btn">Summarize Text</button>
+                    <button id="readability-btn" class="feature-btn">Check Readability</button>
+                </div>
+                
+                <div class="feature-section">
+                    <h3>Mood Support</h3>
+                    <button id="breathing-btn" class="feature-btn">Breathing Exercise</button>
+                    <button id="motivation-btn" class="feature-btn">Motivational Quote</button>
+                </div>
+            </div>
+            
+            <div class="results-panel">
+                <h3>Results</h3>
+                <div id="results-content">
+                    <p class="placeholder-text">Your results will appear here...</p>
+                </div>
+            </div>
+            
+            <div class="recommendations-panel">
+                <h3>Recommendations</h3>
+                <div id="recommendations-content">
+                    <p class="placeholder-text">Personalized recommendations based on your mood will appear here...</p>
+                </div>
+            </div>
+            
+            <div class="info-panel">
+                <h3>About Aura</h3>
+                <p>Aura understands your cognitive and emotional state and dynamically adapts the digital interface to create a safer, more accessible, and healthier online experience.</p>
+                <p>Try typing something positive or negative and watch how the interface responds!</p>
+                
+                <div class="mode-info">
+                    <h4>Available Modes:</h4>
+                    <ul>
+                        <li><strong>Study Mode:</strong> Optimizes the interface for learning with reduced distractions and enhanced focus.</li>
+                        <li><strong>Read Mode:</strong> Improves readability with optimal font size, line spacing, and contrast.</li>
+                        <li><strong>Focus Mode:</strong> Minimizes distractions and provides timers for deep work sessions.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="motivational-quote" class="quote-popup hidden">
+                <div class="quote-content">
+                    <p id="quote-text">"The only way to do great work is to love what you do."</p>
+                    <p id="quote-author">- Steve Jobs</p>
+                </div>
+                <button id="close-quote-btn" class="close-btn">×</button>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Team Aura | Prarambha 2025</p>
+        </footer>
+    </div>
+    
+    <script src="aura.js"></script>
+</body>
+</html>

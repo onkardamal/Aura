@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aura Settings</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🌟 Aura Settings</h1>
+      </header>
+      
+      <div class="section">
+        <h3>🤖 AI APIs</h3>
+        <label>Google Gemini API Key
+          <input id="geminiApiKey" type="password" placeholder="AIza..." />
+          <small>Get your key from <a href="https://makersuite.google.com/app/apikey" target="_blank">Google AI Studio</a></small>
+        </label>
+      </div>
+
+      <div class="section">
+        <h3>🎯 Features</h3>
+        <label class="checkbox">
+          <input type="checkbox" id="typingAnalysis" checked />
+          <span>Analyze typing patterns for mood detection</span>
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" id="breathingExercise" checked />
+          <span>Enable breathing exercise animations</span>
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" id="autoTheme" checked />
+          <span>Auto-apply mood-based themes</span>
+        </label>
+      </div>
+
+      <div class="section">
+        <h3>⚙️ Advanced</h3>
+        <label>Analysis Interval (seconds)
+          <input id="analysisInterval" type="number" min="3" max="30" value="5" />
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" id="sendTelemetry" />
+          <span>Allow anonymous usage metrics (local only)</span>
+        </label>
+      </div>
+
+      <div class="controls">
+        <button id="save" class="save-btn">💾 Save Settings</button>
+        <span id="status" class="muted"></span>
+      </div>
+    </div>
+    <script src="options.js"></script>
+  </body>
+</html>

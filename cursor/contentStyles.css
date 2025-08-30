@@ -1,0 +1,128 @@
+/* Aura Extension Styles */
+
+/* Aura Status Indicator */
+#aura-status {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2147483647;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  font: 14px/1.5 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+#aura-status:hover {
+  opacity: 1;
+}
+
+#aura-status .aura-title {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+#aura-status .aura-sentiment {
+  font-size: 13px;
+}
+
+/* Default Mode - Subtle or no changes to the page */
+html.aura-default-mode {
+  /* No filters applied in default mode */
+  transition: all 0.5s ease-in-out;
+}
+
+/* Happy Mode - Applied when positive sentiment is detected */
+html.aura-happy-mode {
+  filter: brightness(1.05) contrast(1.02) saturate(1.1);
+  transition: all 0.5s ease-in-out;
+}
+
+/* Specific adjustments for happy mode */
+html.aura-happy-mode body {
+  background-color: rgba(255, 253, 240, 0.15) !important;
+}
+
+html.aura-happy-mode img, 
+html.aura-happy-mode video {
+  filter: brightness(1.05) contrast(1.02);
+}
+
+html.aura-happy-mode * {
+  animation-duration: 0.9s !important; /* Speed up animations slightly */
+}
+
+/* Calm Mode - Applied when negative sentiment is detected */
+html.aura-calm-mode {
+  filter: brightness(0.97) contrast(0.95) saturate(0.9);
+  transition: all 0.5s ease-in-out;
+}
+
+/* Specific adjustments for calm mode */
+html.aura-calm-mode body {
+  background-color: rgba(230, 242, 255, 0.15) !important;
+}
+
+html.aura-calm-mode img, 
+html.aura-calm-mode video {
+  filter: brightness(0.95) contrast(0.95);
+}
+
+/* Sad Mode - Applied when very negative sentiment is detected */
+html.aura-sad-mode {
+  filter: brightness(0.95) contrast(0.92) saturate(0.85);
+  transition: all 0.5s ease-in-out;
+}
+
+/* Specific adjustments for sad mode */
+html.aura-sad-mode body {
+  background-color: rgba(240, 240, 250, 0.2) !important;
+}
+
+html.aura-sad-mode img, 
+html.aura-sad-mode video {
+  filter: brightness(0.92) contrast(0.9);
+}
+
+html.aura-calm-mode * {
+  animation-duration: 1.5s !important; /* Slow down animations */
+}
+
+/* Transition animation */
+html.aura-mode-transition {
+  animation: aura-pulse 1s ease-in-out;
+}
+
+@keyframes aura-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.005); }
+  100% { transform: scale(1); }
+}
+
+/* Preserve readability */
+html.aura-calm-mode p, 
+html.aura-calm-mode h1, 
+html.aura-calm-mode h2, 
+html.aura-calm-mode h3, 
+html.aura-calm-mode h4, 
+html.aura-calm-mode h5, 
+html.aura-calm-mode h6, 
+html.aura-calm-mode li, 
+html.aura-calm-mode span, 
+html.aura-calm-mode div {
+  line-height: 1.5 !important;
+  letter-spacing: 0.01em !important;
+}
+
+/* Increase font size slightly for better readability */
+html.aura-calm-mode p, 
+html.aura-calm-mode li, 
+html.aura-calm-mode span {
+  font-size: 1.02em !important;
+}
+
+
+
